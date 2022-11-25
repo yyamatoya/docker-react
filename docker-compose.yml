@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  webfrontend:
+    container_name: react-app
+    build: 
+      context: .
+      dockerfile: ./frontend/Dockerfile
+    command: sh docker-entrypoint.sh
+    volumes:
+      - "./frontend:/src"
+    ports:
+      - "3100:3100"
+    stdin_open: true
