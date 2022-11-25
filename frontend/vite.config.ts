@@ -6,6 +6,9 @@ export default defineConfig({
     open: true, // 自動でブラウザを開く
     host: true,
     port: 3100,
+    watch:{
+      usePolling: true,
+    }
   },
   build: {
     outDir: 'build', // ビルドの出力先ディレクトリ
